@@ -1,44 +1,24 @@
-/*
-It will take in two parameters as well:
-
-The array to work with
-The callback (which Lodash calls "predicate")
-
-const takeUntil = function(array, callback) {
-  // ...
-}
-The function will return a "slice of the array with elements taken from the beginning." It should keep going until the callback/predicate returns a truthy value.
-
-To keep things simple, the callback should only be provided one value: The item in the array.
-
-Implement takeUntil which will keep collecting items from a provided array until the callback provided returns a truthy value.
-
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
-console.log(results1);
-
-console.log('---');
-
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
-console.log(results2);
-
-
-Expected Output
-[ 1, 2, 5, 7, 2 ]
----
-[ 'I\'ve', 'been', 'to', 'Hollywood' ]
-*/
-
-/*
-const map = function(array, callback) {
-  const results = [];
-  for (let item of array) {
-    results.push(callback(item));
+const eqArrays = function(actualArr, expectedArr) {
+  if (actualArr.length !== expectedArr.length) {
+    return "The length of two arrays is not equal.";
+  } else {
+    for (let i = 0; i < actualArr.length; i++) {
+      if (actualArr[i] !== expectedArr[i]) {
+        return false;
+      }
+    }
+    return true;
   }
-  return results;
 };
-*/
+
+
+const assertArraysEqual = function(actualArr, expectedArr) {
+  if (eqArrays(actualArr,expectedArr)) {
+      console.log("The arrays are same.");
+  } else {
+    console.log("The arrays are different.");
+  }
+};
 
 const takeUntil = function(array, callback) {
   const result = [];
@@ -61,3 +41,5 @@ console.log('---');
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 const results2 = takeUntil(data2, x => x === ',');
 console.log(results2);
+
+assertArraysEqual(takeUntil(data1, x => x < 0), takeUntil(data1, x => x <= 0));
