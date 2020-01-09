@@ -13,21 +13,14 @@ const assertEqual = function(actual, expected) {
     }
   }
 };
-/*
-  for (const item of allItems) {
-    if (results[item]) {
-      results[item] += 1;
-    } else {
-      results[item] = 1;
-    }
-  }
-*/
+
 const findKeyByValue = function(isObj, isValue) {
   for (let title in isObj) {
     if (isObj[title] === isValue) {
       return title;
     }
   }
+  return;
 };
 
 // TEST
