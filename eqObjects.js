@@ -41,7 +41,6 @@ const eqObjects = function(object1, object2) {
   for (let element in object2) {
     if (Array.isArray(object2[element])) {
       if (!eqArrays(object1[element], object2[element])) {
-        console.log(`not matched array object2[element] ${object2[element]}`);
         return false;
       }
     } 
