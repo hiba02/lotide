@@ -36,8 +36,8 @@ const middle = function(array) {
 };
 
 //TEST CODE
-assertArraysEqual(middle([1, 2, 3]), middle([1, 2, 3, 4, 5]));
+assertArraysEqual(middle([]), middle([1, 2]));
 assertArraysEqual(middle([1, 2, 3]), middle([1, 2, 3]));
 assertArraysEqual(middle([1, 2, 3, 4]), middle([1, 2, 3, 4]));
-
-
+console.log(middle([]));
+console.log(middle([1, 2]));
