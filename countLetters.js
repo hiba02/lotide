@@ -1,18 +1,18 @@
-const assertEqual = function(actual, expected) {
-  if (typeof actual === 'number' && typeof expected === 'number') {
-    if (actual === expected) {
-      console.log(`emojis Assertion Passed: ${actual} === ${expected}`);
-    } else {
-      console.log(`emojis Assertion Failed: ${actual} !== ${expected}`);
-    }
-  } else {
-    if (actual === expected) {
-      console.log(`emojis Assertion Passed: "${actual}" === "${expected}"`);
-    } else {
-      console.log(`emojis Assertion Failed: "${actual}" !== "${expected}"`);
-    }
-  }
-};
+// const assertEqual = function(actual, expected) {
+//   if (typeof actual === 'number' && typeof expected === 'number') {
+//     if (actual === expected) {
+//       console.log(`emojis Assertion Passed: ${actual} === ${expected}`);
+//     } else {
+//       console.log(`emojis Assertion Failed: ${actual} !== ${expected}`);
+//     }
+//   } else {
+//     if (actual === expected) {
+//       console.log(`emojis Assertion Passed: "${actual}" === "${expected}"`);
+//     } else {
+//       console.log(`emojis Assertion Failed: "${actual}" !== "${expected}"`);
+//     }
+//   }
+// };
 /*
   for (const item of allItems) {
     if (results[item]) {
@@ -36,6 +36,8 @@ const countLetters = function(str) {
   return results;
 };
 
+module.exports = countLetters;
+
 //TEST
-console.log(countLetters("lighthouse in the house")); 
-assertEqual(countLetters("lighthouse in the house"), countLetters("lighthouse in the house")); 
+// console.log(countLetters("lighthouse in the house")); 
+// assertEqual(countLetters("lighthouse in the house"), countLetters("lighthouse in the house")); 
